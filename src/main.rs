@@ -1,12 +1,15 @@
 //disable the standard library which is OS-dependent, since this is a binary file and we are trying to build an OS that operates over bare metal
 #![no_std]
-//disable main function as entry point, since _start is the default entry point name for most systems
+// disable all Rust-level entry points
 #![no_main]
 
 use core::panic::PanicInfo;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
+    //C naming convention
+    // this function is the entry point, since the linker looks for a function
+    // named `_start` by default
     loop {}
 }
 
