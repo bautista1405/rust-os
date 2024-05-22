@@ -7,7 +7,7 @@ Also, here you have [the repository](https://github.com/phil-opp/blog_os).
 
 ### Bare Bones
 - [x] A Freestanding Rust Binary
-- [ ] A Minimal Rust Kernel
+- [x] A Minimal Rust Kernel
 - [ ] VGA Text Mode
 - [ ] Testing
   
