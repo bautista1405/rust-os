@@ -8,8 +8,7 @@ use core::panic::PanicInfo;
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
     //C naming convention
-    // this function is the entry point, since the linker looks for a function
-    // named `_start` by default
+    // this function is the entry point, since the linker looks for a function named `_start` by default
     loop {}
 }
 
