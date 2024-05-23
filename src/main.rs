@@ -5,6 +5,8 @@
 
 use core::panic::PanicInfo;
 
+mod vga_buffer;
+
 // This function is called on panic.
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
@@ -18,7 +20,7 @@ pub extern "C" fn _start() -> ! {
     //C naming convention
     // this function is the entry point, since the linker looks for a function named `_start` by default
 
-    let vga_buffer = 0xb8000 as *mut u8;
+    let vga_buffer = 0xb8000 as *mut u8; //address where we can access the VGA text buffer in the VGA hardware
 
     for (i, &byte) in HELLO.iter().enumerate() {
         unsafe {
